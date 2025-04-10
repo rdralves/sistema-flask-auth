@@ -5,8 +5,8 @@ def create_app():
     app.config.from_object('config.Config')
     
     
-    @app.route('/')
-    def hello():
-        return 'Hello, Word!'
+    from app.routes.main_routes import bp as main_bp
+    
+    app.register_blueprint(main_bp)
     
     return app 
