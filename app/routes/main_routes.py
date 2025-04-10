@@ -1,11 +1,11 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 bp = Blueprint('main', __name__)
 
 @bp.route('/')
 def index():
-    return 'Bem vindo a página inicial...segundo ponto add'
+    return render_template('index.html')
 
 @bp.route('/sobre')
 def sobre():
-    return 'Bem vindo a página Sobre'
+    return render_template('sobre.html')
