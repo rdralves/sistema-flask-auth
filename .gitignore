@@ -3,3 +3,12 @@ __pycache__
 __pycache__
 meubanco.db
 instance
+__pycache__/
+*.pyc
+*.db
+.env
+.vscode/
+*.sqlite3
+instance/
+*.log
+.venv/
