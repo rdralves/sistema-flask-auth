@@ -21,7 +21,7 @@ Projeto web completo com:
 ## 📂 Como executar
 
 ```bash
-git clone https://github.com/SEU_USUARIO/sistema-flask-auth.git
+git clone https://github.com/rdralves/sistema-flask-auth.git
 cd sistema-flask-auth
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
