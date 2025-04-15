@@ -4,4 +4,7 @@
 {% block content %}
 <h2>Bem-vindo ao Dashboard</h2>
 <p>Olá, {{ nome }}! Você está logado.</p>
+
+<a href="{{ url_for('products.criar') }}">Prudotos</a> |
+<a href="{{ url_for('products.listar') }}">listar</a> |
 {% endblock %}

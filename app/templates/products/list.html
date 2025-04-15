@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Produtos</h2>
+<a href="{{ url_for('products.criar') }}">Novo Produto</a>
+<ul>
+    {% for p in produtos %}
+    <li>
+        {{ p.nome }} - R$ {{ p.preco }} - Estoque: {{ p.estoque }}
+        [<a href="{{ url_for('products.editar', id=p.id) }}">Editar</a>]
+        [<a href="{{ url_for('products.deletar', id=p.id) }}">Remover</a>]
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

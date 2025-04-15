@@ -13,9 +13,11 @@ def create_app():
 
     from app.routes.main_routes import bp as main_bp
     from app.routes.auth_routes import bp as auth_bp
+    from app.routes.produtos_routes import bp as products_bp
+    
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
-    
+    app.register_blueprint(products_bp)
     
 
     return app
