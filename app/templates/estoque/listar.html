@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Movimentações de Estoque</h2>
+<a href="{{ url_for('estoque.entrada') }}">Registrar Entrada</a> |
+<a href="{{ url_for('estoque.saida') }}">Registrar Saída</a>
+<ul>
+    {% for m in movimentos %}
+    <li>{{ m.data.strftime('%d/%m/%Y') }} - {{ m.tipo }} - {{ m.produto.nome }} ({{ m.quantidade }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}

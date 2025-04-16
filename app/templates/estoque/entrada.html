@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Entrada de Produto</h2>
+<form method="POST">
+    <label>Produto:</label>
+    <select name="produto_id">
+        {% for p in produtos %}
+        <option value="{{ p.id }}">{{ p.nome }}</option>
+        {% endfor %}
+    </select><br><br>
+    <label>Quantidade:</label>
+    <input type="number" name="quantidade"><br><br>
+    <button type="submit">Registrar</button>
+</form>
+{% endblock %}
