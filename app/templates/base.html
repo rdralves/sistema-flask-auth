@@ -12,7 +12,7 @@
     <nav>
         <a href="{{ url_for('main.index') }}">Início</a> |
         <a href="{{ url_for('main.sobre') }}">Sobre</a> |
-    
+
         {% if session.get('usuario_id') %}
         <a href="{{ url_for('main.dashboard') }}">Dashboard</a> |
         <a href="{{ url_for('auth.logout') }}">Logout</a> |
@@ -21,6 +21,10 @@
         <a href="{{ url_for('auth.login') }}">Login</a> |
         <a href="{{ url_for('auth.register') }}">Registrar</a>
         {% endif %}
+        {% if session.get('is_admin') %}
+        <a href="{{ url_for('main.admin_dashboard') }}">Admin</a> |
+        {% endif %}
+
     </nav>
 
 

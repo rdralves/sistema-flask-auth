@@ -18,6 +18,7 @@ def login():
         if user and check_password_hash(user.password, password):
             session['usuario_id'] = user.id
             session['usuario_nome'] = user.username
+            session['is_admin'] = user.is_admin
             return redirect(url_for('main.dashboard'))
         else:
             mensagem = "Usuário ou senha inválidos."

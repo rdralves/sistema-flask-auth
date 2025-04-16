@@ -18,3 +18,9 @@ def dashboard():
 
     nome = session.get('usuario_nome')
     return render_template('dashboard.html', nome=nome)
+
+@bp.route('/admin')
+def admin_dashboard():
+    if not session.get('usuario_id') or not session.get('is_admin'):
+        return redirect(url_for('auth.login'))  # Protege a rota
+    return render_template('admin/dashboard.html')
