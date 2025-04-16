@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Dashboard de Estoque{% endblock %}
+
+{% block content %}
+<h2>📊 Dashboard de Estoque</h2>
+
+<p><strong>Total de Entradas:</strong> {{ total_entradas }}</p>
+<p><strong>Total de Saídas:</strong> {{ total_saidas }}</p>
+<p><strong>Saldo Geral:</strong> {{ total_entradas - total_saidas }}</p>
+
+<hr>
+<h3>📦 Saldo por Produto</h3>
+<table border="1">
+    <tr>
+        <th>Produto</th>
+        <th>Estoque Atual</th>
+    </tr>
+    {% for produto in produtos %}
+    <tr>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.estoque }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

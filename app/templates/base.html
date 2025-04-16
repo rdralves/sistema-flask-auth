@@ -24,6 +24,10 @@
         {% if session.get('is_admin') %}
         <a href="{{ url_for('main.admin_dashboard') }}">Admin</a> |
         {% endif %}
+        {% if session.get('is_admin') %}
+        <a href="{{ url_for('dashboard.estoque_dashboard') }}">Dashboard Estoque</a> |
+        {% endif %}
+
 
     </nav>
 
